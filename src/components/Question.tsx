@@ -36,7 +36,7 @@ export function Question({
   };
 
   return (
-    <div className="mx-auto max-w-3xl">
+    <div className="mx-auto mb-[81px] max-w-3xl">
       <p className="text-xs text-gray-600">(cg_{question.questionCategory})</p>
       <div className="mt-4 rounded-md border px-4 py-8 shadow-md sm:px-8">
         <div className="flex grid-cols-2 flex-col gap-2 sm:grid">
