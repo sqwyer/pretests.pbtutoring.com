@@ -127,7 +127,7 @@ const december24: TestType = {
     },
     {
       questionContent:
-        'In the figure shown below, $ABCD$ is a rectangle, $EFGH$ is a square, and $\\overline{CD}$ is the diameter of a semicircle. Point $K$ is the midpoint of $\\overline{CD}$. Point $J$ is the midpoint of both $\\overline{AB}$ and $\\overline{EF}$. Points $E$ and $F$ lie on $\\overline{AB}$. The 3 given lengths are in meters. <img src="https://i.ibb.co/YQZRSPg/Screenshot-2024-11-26-133936.png" />',
+        'In the figure shown below, $ABCD$ is a rectangle, $EFGH$ is a square, and $\\overline{CD}$ is the diameter of a semicircle. Point $K$ is the midpoint of $\\overline{CD}$. Point $J$ is the midpoint of both $\\overline{AB}$ and $\\overline{EF}$. Points $E$ and $F$ lie on $\\overline{AB}$. The 3 given lengths are in meters. What is the length, in meters, of arc CD? <img src="https://i.ibb.co/YQZRSPg/Screenshot-2024-11-26-133936.png" />',
       questionCategory: "GEOMETRY",
       a: "$2.5\\pi$",
       b: "$5\\pi$",
