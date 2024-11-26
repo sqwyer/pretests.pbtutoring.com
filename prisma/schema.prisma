@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum QuestionCategory {
+  NUMBERS_AND_QUANTITY
+  ALGEBRA
+  FUNCTIONS
+  GEOMETRY
+  STATISTICS_AND_PROBABILITY
+  INTEGRATING_ESSENTIAL_SKILLS
+  MODELING
+}
+
+model Answer {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  submission   Submision @relation(fields: [submissionId], references: [id])
+  submissionId String    @db.ObjectId
+
+  questionCategory QuestionCategory
+  questionContent  String
+  questionAnswer   Int // correct answer
+
+  a String // answer 1
+  b String // answer 2
+  c String // answer 3
+  d String // answer 4
+  e String // answer 5
+
+  choice Int? // selected answer
+}
+
+model Submision {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String?
+  answers   Answer[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
