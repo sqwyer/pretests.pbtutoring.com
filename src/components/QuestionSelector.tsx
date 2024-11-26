@@ -20,7 +20,7 @@ export function QuestionSelector({
     <>
       <div className="grid grid-cols-3 sm:hidden">
         <button
-          className="mr-auto flex flex-row items-center rounded-md border border-blue-400 px-2 py-1 text-sm text-blue-200 duration-75 hover:bg-blue-600 disabled:cursor-not-allowed disabled:border-transparent disabled:opacity-50 disabled:hover:bg-blue-700"
+          className="mr-auto flex flex-row items-center rounded-md border border-blue-400 px-2 py-1 text-xs text-blue-200 duration-75 hover:bg-blue-600 disabled:cursor-not-allowed disabled:border-transparent disabled:opacity-50 disabled:hover:bg-blue-700 sm:text-sm"
           disabled={currentQuestion <= 0}
           onClick={() =>
             currentQuestion > 0 && onChangeQuestion(currentQuestion - 1)
@@ -30,7 +30,7 @@ export function QuestionSelector({
           <p className="pr-2">Previous</p>
         </button>
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex w-full flex-row items-center justify-center gap-3 rounded-md bg-white px-4 py-1 text-sm font-medium text-blue-600">
+          <DropdownMenuTrigger className="flex w-full flex-row items-center justify-center gap-2 rounded-md bg-white px-3 py-1 text-xs font-medium text-blue-600 sm:text-sm">
             <p>
               {currentQuestion < questions
                 ? `Question ${currentQuestion + 1}`
@@ -63,7 +63,7 @@ export function QuestionSelector({
           </DropdownMenuContent>
         </DropdownMenu>
         <button
-          className="ml-auto flex flex-row items-center gap-1 rounded-md border border-blue-400 px-2 py-1 text-sm text-blue-200 duration-75 hover:bg-blue-600 disabled:cursor-not-allowed disabled:border-transparent disabled:opacity-50 disabled:hover:bg-blue-700"
+          className="ml-auto flex flex-row items-center gap-1 rounded-md border border-blue-400 px-2 py-1 text-xs text-blue-200 duration-75 hover:bg-blue-600 disabled:cursor-not-allowed disabled:border-transparent disabled:opacity-50 disabled:hover:bg-blue-700 sm:text-sm"
           disabled={
             currentQuestion >= questions ||
             (!showSubmit && currentQuestion === questions - 1)

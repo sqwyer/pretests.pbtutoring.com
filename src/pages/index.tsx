@@ -28,7 +28,7 @@ export function PageLayout({
 
 export default function Home() {
   return (
-    <PageLayout className="flex min-h-screen items-center justify-center">
+    <PageLayout className="flex min-h-screen justify-center p-8 sm:items-center">
       <div className="flex w-full max-w-sm flex-col gap-8">
         <div className="rounded-sm border shadow-sm">
           <p className="rounded-t-sm border-b bg-gray-100 p-2 text-xs">
@@ -45,7 +45,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-row items-center gap-2 border-t pt-2">
+        <div className="mt-auto flex flex-row items-center gap-2 border-t pt-4 sm:mt-0">
           <Image
             src={"/pbt-shield.svg"}
             height={32}

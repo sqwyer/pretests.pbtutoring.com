@@ -33,8 +33,6 @@ function calculateCategoryScore(
   const predictedIncorrect =
     categoryTotalQuestions[category] - predictedCorrect;
 
-  console.log(predictedCorrect, predictedIncorrect);
-
   return {
     predictedCorrect,
     predictedIncorrect,
@@ -50,10 +48,14 @@ function calculateOverallScore(submission: FullSubmission) {
       .predictedCorrect +
     calculateCategoryScore(submission, "NUMBERS_AND_QUANTITY")
       .predictedCorrect +
-    calculateCategoryScore(submission, "NUMBERS_AND_QUANTITY")
-      .predictedCorrect +
     calculateCategoryScore(submission, "STATISTICS_AND_PROBABILITY")
       .predictedCorrect;
+
+  console.log(
+    totalPredictedCorrect,
+    totalPredictedCorrect / 60,
+    (totalPredictedCorrect / 60) * 36,
+  );
 
   return { score: (totalPredictedCorrect / 60) * 36, totalPredictedCorrect };
 }
@@ -162,9 +164,9 @@ function Guage({ score, className }: { score: number; className?: string }) {
           r="16"
           fill="none"
           className="stroke-current text-gray-200"
-          stroke-width="1.5"
-          stroke-dasharray="75 100"
-          stroke-linecap="round"
+          strokeWidth="1.5"
+          strokeDasharray="75 100"
+          strokeLinecap="round"
         ></circle>
 
         {/* <!-- Gauge Progress --> */}
@@ -174,9 +176,9 @@ function Guage({ score, className }: { score: number; className?: string }) {
           r="16"
           fill="none"
           className="stroke-current text-blue-600"
-          stroke-width="1.5"
-          stroke-dasharray={`${(score / 36) * 75} 100`}
-          stroke-linecap="round"
+          strokeWidth="1.5"
+          strokeDasharray={`${(score / 36) * 75} 100`}
+          strokeLinecap="round"
         ></circle>
       </svg>
 

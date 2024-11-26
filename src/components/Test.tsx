@@ -4,6 +4,7 @@ import { Question } from "./Question";
 import { api } from "~/utils/api";
 import { ExternalLinkIcon, TriangleAlertIcon } from "lucide-react";
 import { QuestionSelector } from "./QuestionSelector";
+import Link from "next/link";
 
 export type QuestionType = {
   questionContent: string;
@@ -85,9 +86,12 @@ export function Test({ test }: { test: TestType }) {
           </span>
           <span>{test.name}</span>
           <span className="hidden text-right sm:inline-block">
-            <button className="ml-auto flex h-6 w-6 cursor-pointer items-center gap-1 rounded-md duration-75 hover:bg-blue-600">
+            <Link
+              className="ml-auto flex h-6 w-6 cursor-pointer items-center gap-1 rounded-md duration-75 hover:bg-blue-600"
+              href="/"
+            >
               <ExternalLinkIcon className="mx-auto h-4 w-4 -rotate-90" />
-            </button>
+            </Link>
           </span>
         </p>
         <QuestionSelector
