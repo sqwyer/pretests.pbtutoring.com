@@ -1,8 +1,6 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
-import { ObjectId } from 'bson';
-
 const zQuestionCategory = z.enum([
   "NUMBERS_AND_QUANTITY",
   "ALGEBRA",
