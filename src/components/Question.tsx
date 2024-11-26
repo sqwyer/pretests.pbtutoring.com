@@ -84,7 +84,7 @@ export function Question({
                 >
                   {choice}
                 </p>
-                <p className={sourceSerif.className}>
+                <p className={`text-left ${sourceSerif.className}`}>
                   <Latex>
                     {question[choice as "a" | "b" | "c" | "d" | "e"]}
                   </Latex>
