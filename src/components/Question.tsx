@@ -5,6 +5,13 @@ import Latex from "react-latex-next";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { cn } from "~/lib/utils";
 
+import { Source_Serif_4 } from "next/font/google";
+
+const sourceSerif = Source_Serif_4({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export function Question({
   question,
   answer,
@@ -34,7 +41,7 @@ export function Question({
       <div className="mt-4 rounded-md border px-4 py-8 shadow-md sm:px-8">
         <div className="flex grid-cols-2 flex-col gap-2 sm:grid">
           <div className="border-b px-4 pb-8 sm:border-b-0 sm:border-r sm:pb-0">
-            <p className="text-pretty font-serif">
+            <p className={sourceSerif.className}>
               <Latex>{question.questionContent}</Latex>
             </p>
           </div>
@@ -77,7 +84,7 @@ export function Question({
                 >
                   {choice}
                 </p>
-                <p className="font-serif">
+                <p className={sourceSerif.className}>
                   <Latex>
                     {question[choice as "a" | "b" | "c" | "d" | "e"]}
                   </Latex>
