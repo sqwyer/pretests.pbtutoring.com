@@ -53,7 +53,7 @@ const december24: TestType = {
         "You tossed a fair coin 10 times, recording H when the head side landed up and T when the tail side landed up. You recorded: T H H H H T H H H H. What is the probability that the head side will land up on your next toss?",
       questionCategory: "STATISTICS_AND_PROBABILITY",
       a: "$0$",
-      b: "$(\\frac{1}{2})^11$",
+      b: "$(\\frac{1}{2})^{11}$",
       c: "$(\\frac{1}{2})^9$",
       d: "$\\frac{1}{2}$",
       e: "$1$",
