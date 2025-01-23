@@ -55,6 +55,7 @@ export const submissionRouter = createTRPCRouter({
         name: z.string(),
         email: z.string().email().optional(),
         answers: z.array(zAnswer),
+        testLabel: z.string().optional(),
       }),
     )
     .mutation(async ({ input, ctx }) => {
@@ -62,6 +63,7 @@ export const submissionRouter = createTRPCRouter({
         data: {
           name: input.name,
           email: input.email,
+          testLabel: input.testLabel,
           answers: {
             createMany: {
               data: input.answers.map((answer) => ({

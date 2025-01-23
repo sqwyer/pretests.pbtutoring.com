@@ -36,11 +36,18 @@ export default function Home() {
           </p>
           <div>
             {/* tests list */}
-            <Link
+            {/* <Link
               href="/tests/december24"
               className="flex items-center p-2 hover:text-blue-600 hover:underline"
             >
               <p className="font-medium">December ACT Pretest (11/26/24)</p>
+              <ArrowRight className="ml-auto h-4 w-4" />
+            </Link> */}
+            <Link
+              href="/tests/feb25"
+              className="flex items-center p-2 hover:text-blue-600 hover:underline"
+            >
+              <p className="font-medium">February ACT Pretest (1/23/25)</p>
               <ArrowRight className="ml-auto h-4 w-4" />
             </Link>
           </div>

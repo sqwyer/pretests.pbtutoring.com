@@ -37,7 +37,7 @@ export default function Submissions() {
             Pretest Admin Page
           </p>
         </div>
-        <div className="p-8">
+        <div className="w-full p-8">
           <div className="mx-auto w-full max-w-2xl rounded-md border">
             <div className="flex flex-row items-center border-b p-2">
               <h1 className="text-2xl font-medium">All Responses</h1>
@@ -69,7 +69,8 @@ export default function Submissions() {
                       {response.name}
                     </p>
                     <p className="text-sm text-gray-600">
-                      Submitted at{" "}
+                      {response.testLabel && `${response.testLabel}: `}Submitted
+                      at{" "}
                       {response.createdAt.toLocaleTimeString("en-US", {
                         hour: "numeric",
                         minute: "2-digit",

@@ -64,6 +64,7 @@ export function Test({ test }: { test: TestType }) {
       {
         answers,
         name,
+        testLabel: test.name,
       },
       {
         onSuccess: (data) =>
